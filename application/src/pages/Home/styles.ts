@@ -1,5 +1,39 @@
 import styled from "styled-components";
 
+
+export const HomeContainer = styled.main`
+    flex: 1;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    form{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3.5rem;
+
+        width: 100%;
+        max-width: 40.937rem;
+        font-size: 1.125rem;
+        flex-wrap: wrap;
+        font-weight: bold;
+    }
+
+`
+export const FormContainer = styled.div`
+    width: 100%;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;   
+   
+`
 export const BaseInput = styled.input`
     padding: 0 .5rem;
     background-color: transparent;
@@ -19,6 +53,9 @@ export const BaseInput = styled.input`
         color: ${props => props.theme["gray-500"]};
 
     }
+    &::-webkit-calendar-picker-indicator{
+       display: none !important
+    }
 
 `
 
@@ -29,43 +66,9 @@ export const TaskInput = styled(BaseInput)`
 `
 export const MinuteAmountInput = styled(BaseInput)`
     text-align: center;
-    width: 4.625rem;
+    width: 4.5rem;
 
-    &::after{
-        content: 'isijijsid';
-    }
-    &::-webkit-inner-spin-button
-    { -webkit-appearance: none;}
-`
-export const HomeContainer = styled.main`
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    form{
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        row-gap: 3.5rem;
-
-
-        max-width: 40.5rem;
-        font-size: 1.125rem;
-        flex-wrap: wrap;
-        font-weight: bold;
-    }
-
-`
-export const FormContainer = styled.div`
-    width: 100%;
-    display:  flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: .5rem;
-    flex-wrap: wrap;   
+  
    
 `
 
