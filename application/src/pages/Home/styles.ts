@@ -26,9 +26,6 @@ export const HomeContainer = styled.main`
 
 `
 
-
-
-
 const BaseCountDownButton = styled.button`
     width: 100%;
     display:  flex;

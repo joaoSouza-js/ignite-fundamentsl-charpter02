@@ -1,4 +1,4 @@
-import { Status } from "../../components/Status"
+import { Status } from "./components/Status"
 import { HistoryContainer, HistoryList, TableBody, TableBodyWithoutTask, TableContainer, TableHeader } from "./style"
 
 export function History() {
@@ -25,9 +25,6 @@ export function History() {
       status: "Em andamento" as const
     },
 
-
-
-    
   ]
 
   return (

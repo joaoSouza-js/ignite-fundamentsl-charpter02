@@ -1,7 +1,5 @@
 import { TableRowContainer } from "./style"
 
-
-
 interface StatusProps{
     task:{
         descripiton: string,
@@ -12,7 +10,7 @@ interface StatusProps{
 }
 
 export function Status({task}:StatusProps){
-
+    
     const {descripiton,duration,initDate, status='Concluído'} = task
 
     return(

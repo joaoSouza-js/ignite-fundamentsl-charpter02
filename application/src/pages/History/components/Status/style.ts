@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { defaultTheme } from "../../styles/themes/default";
+import { defaultTheme } from "../../../../styles/themes/default";
 
 type statusProps =  {variant : 'Concluído' | 'Em andamento' | 'Interrompido'}
 
