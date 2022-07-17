@@ -13,13 +13,14 @@ export interface CycleProps {
     dateInterrupted?: Date,
 }
 interface CycleContextType{
+    CycleList: CycleProps[]
     isActiveCycle: boolean
     amountSecondsPassed: number,
     activeCycleId: string | null,
     activeCycle: CycleProps | undefined,
-    interuptCurrentCycle: () => void
+    interuptCurrentCycle: () => void,
     markCurruntCycleAsFinished: () => void,
-    createNewCycle: (data: CreateCycleData) => void
+    createNewCycle: (data: CreateCycleData) => void,
     ChangeAmountSecondsPassed: (differenceInSeconds: number) => void
 }
 interface CycleContextProvierProps{
@@ -80,6 +81,7 @@ export function CycleContextProvider({children}:CycleContextProvierProps){
 
     return(
         <CycleContext.Provider value={{
+                CycleList,
                 activeCycle,
                 activeCycleId,
                 isActiveCycle,
