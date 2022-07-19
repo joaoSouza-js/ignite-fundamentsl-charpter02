@@ -1,14 +1,14 @@
-import { CycleProps } from "../../../../context/CycleContext"
 import { TableRowContainer } from "./style"
 import {formatDistanceToNow} from 'date-fns'
 import ptBR from "date-fns/esm/locale/pt-BR/index.js"
+import { CycleProps } from "../../../../reducers/reducer"
 interface StatusProps{
     cycle: CycleProps
 }
 
 export function Status({cycle}:StatusProps){
     const {task,minutesAmount, startDate,dateFinished,dateInterrupted} = cycle
-    const cycleDiferenceToNow = formatDistanceToNow(startDate,{
+    const cycleDiferenceToNow = formatDistanceToNow(new Date(startDate),{
         locale: ptBR,
         addSuffix: true
     })
